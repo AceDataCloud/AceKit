@@ -12,7 +12,7 @@
   <a href="#-quick-start">⚡ Quick start</a> ·
   <a href="#-whats-inside">🧰 What's inside</a> ·
   <a href="https://platform.acedata.cloud">🔑 Free API key</a> ·
-  <a href="https://platform.acedata.cloud/support">💬 Support</a> ·
+  <a href="https://discord.gg/f9GRuKCmRc">💬 Discord</a> ·
   <a href="#-star-us">⭐ Star us</a>
 </p>
 
@@ -109,8 +109,10 @@ It tells the next developer this is worth their three seconds.
 - 📚 API reference: <https://docs.acedata.cloud>
 - 🧠 Skills source: <https://github.com/AceDataCloud/Skills>
 - 🔌 MCP servers: <https://github.com/AceDataCloud/MCPs>
-- 💬 Support: <https://platform.acedata.cloud/support>
+- 💬 Discord: <https://discord.gg/f9GRuKCmRc>
 - 🐦 X: [@acedatacloud](https://x.com/acedatacloud)
+- 📧 Email: office@acedata.cloud
+- 🆘 Support: <https://platform.acedata.cloud/support>
 
 ## 📄 License
 

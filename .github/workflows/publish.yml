@@ -1,0 +1,47 @@
+name: Publish to npm
+
+# Publishes the `acekit` package to npm.
+# Setup (one-time): add an npm automation token as the repo secret NPM_TOKEN
+#   (npm → Access Tokens → Generate → Automation; or a granular token with
+#    publish rights to the `acekit` package).
+# Release: bump "version" in package.json, then push a matching tag:
+#   git tag v0.1.0 && git push origin v0.1.0
+# Or run this workflow manually from the Actions tab (workflow_dispatch).
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Sanity check
+        run: node --check bin/cli.js
+
+      - name: Verify tag matches package.json version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          PKG_VERSION="$(node -p "require('./package.json').version")"
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "::error::tag $TAG_VERSION does not match package.json $PKG_VERSION"
+            exit 1
+          fi
+
+      - name: Publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

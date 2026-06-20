@@ -109,7 +109,8 @@ async function main() {
     if (!process.env[TOKEN_ENV]) {
       console.log(`\n   ℹ️  Set your key when ready:  export ${TOKEN_ENV}=...   (${SIGNUP_URL})`);
     }
-    console.log(`\n   ⭐  If this helped, star us: https://github.com/AceDataCloud/AceKit\n`);
+    console.log(`\n   ⭐  If this helped, star us: https://github.com/AceDataCloud/AceKit`);
+    console.log(`   💬  Questions? Join the community: https://discord.gg/f9GRuKCmRc\n`);
   } else {
     console.log(`\n❌  Install failed. Try a fresh terminal, or open an issue:`);
     console.log(`      https://github.com/AceDataCloud/AceKit/issues\n`);

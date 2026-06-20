@@ -24,7 +24,10 @@
     "url": "git+https://github.com/AceDataCloud/AceKit.git"
   },
   "license": "MIT",
-  "author": "AceDataCloud <support@acedata.cloud> (https://platform.acedata.cloud)",
+  "author": "AceDataCloud <office@acedata.cloud> (https://platform.acedata.cloud)",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "bin": {
     "acekit": "bin/cli.js"
