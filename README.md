@@ -11,7 +11,7 @@
 <p>
   <a href="#-quick-start">⚡ Quick start</a> ·
   <a href="#-whats-inside">🧰 What's inside</a> ·
-  <a href="https://platform.acedata.cloud">🔑 Free API key</a> ·
+  <a href="https://platform.acedata.cloud/?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=github&utm_campaign=acekit">🔑 Free API key</a> ·
   <a href="https://discord.gg/f9GRuKCmRc">💬 Discord</a> ·
   <a href="#-star-us">⭐ Star us</a>
 </p>
@@ -47,7 +47,7 @@ npx acekit list      # see available capabilities
 npx acekit --help
 ```
 
-> **Free quota included.** Grab a key at **[platform.acedata.cloud](https://platform.acedata.cloud)** — no credit card to start. AceKit prompts for it on first run, or set `ACEDATACLOUD_API_TOKEN`.
+> **Free quota included.** Grab a key at **[platform.acedata.cloud](https://platform.acedata.cloud/?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=github&utm_campaign=acekit)** — no credit card to start. AceKit prompts for it on first run, or set `ACEDATACLOUD_API_TOKEN`.
 
 ---
 
@@ -105,7 +105,7 @@ It tells the next developer this is worth their three seconds.
 
 ## 🔗 Links
 
-- 🔑 Free API key & docs: <https://platform.acedata.cloud>
+- 🔑 Free API key & docs: <https://platform.acedata.cloud/?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=github&utm_campaign=acekit>
 - 📚 API reference: <https://docs.acedata.cloud>
 - 🧠 Skills source: <https://github.com/AceDataCloud/Skills>
 - 🔌 MCP servers: <https://github.com/AceDataCloud/MCPs>

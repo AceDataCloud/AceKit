@@ -14,7 +14,8 @@ import { join } from 'node:path';
 import { createInterface } from 'node:readline/promises';
 import { stdin, stdout } from 'node:process';
 
-const SIGNUP_URL = 'https://platform.acedata.cloud';
+const SIGNUP_URL =
+  'https://platform.acedata.cloud/?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_campaign=acekit';
 const TOKEN_ENV = 'ACEDATACLOUD_API_TOKEN';
 const SKILLS_PKG = '@acedatacloud/skills';
 
