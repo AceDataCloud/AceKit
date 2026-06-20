@@ -1,0 +1,22 @@
+{
+  "$comment": "AceKit capability catalog (scaffold). At build time this should be generated from the Skills/MCPs registries so it stays current. Each entry maps a friendly name to its skill/MCP id.",
+  "version": "0.1.0",
+  "signup": "https://platform.acedata.cloud",
+  "capabilities": [
+    { "name": "midjourney", "modality": "image", "skill": "midjourney", "mcp": "MidjourneyMCP", "desc": "Midjourney image & video generation" },
+    { "name": "flux", "modality": "image", "skill": "flux", "mcp": "FluxMCP", "desc": "Flux image generation" },
+    { "name": "seedream", "modality": "image", "skill": "seedream", "mcp": "SeedreamMCP", "desc": "Seedream image generation & editing" },
+    { "name": "nanobanana", "modality": "image", "skill": "nanobanana", "mcp": "NanoBananaMCP", "desc": "Nano Banana (Gemini) image gen & edit" },
+    { "name": "openai-image", "modality": "image", "skill": "openai-image", "mcp": "OpenAIMCP", "desc": "OpenAI / gpt-image generation & edits" },
+    { "name": "sora", "modality": "video", "skill": "sora", "mcp": "SoraMCP", "desc": "OpenAI Sora video generation" },
+    { "name": "veo", "modality": "video", "skill": "veo", "mcp": "VeoMCP", "desc": "Google Veo video generation" },
+    { "name": "kling", "modality": "video", "skill": "kling", "mcp": "KlingMCP", "desc": "Kling video generation" },
+    { "name": "luma", "modality": "video", "skill": "luma", "mcp": "LumaMCP", "desc": "Luma Dream Machine video" },
+    { "name": "hailuo", "modality": "video", "skill": "hailuo", "mcp": "HailuoMCP", "desc": "Hailuo / MiniMax video" },
+    { "name": "seedance", "modality": "video", "skill": "seedance", "mcp": "SeedanceMCP", "desc": "ByteDance Seedance video" },
+    { "name": "wan", "modality": "video", "skill": "wan", "mcp": "WanMCP", "desc": "Alibaba Wan video" },
+    { "name": "suno", "modality": "music", "skill": "suno", "mcp": "SunoMCP", "desc": "Suno AI music, lyrics, covers, personas" },
+    { "name": "serp", "modality": "search", "skill": "serp", "mcp": "SerpMCP", "desc": "Google SERP: web, images, news, maps, videos" },
+    { "name": "shorturl", "modality": "utility", "skill": "shorturl", "mcp": "ShortURLMCP", "desc": "Short URL creation & management" }
+  ]
+}

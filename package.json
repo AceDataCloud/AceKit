@@ -1,0 +1,44 @@
+{
+  "name": "acekit",
+  "version": "0.1.0",
+  "description": "One command — every AI media & model API (image, video, music, search) inside your coding agent (Claude Code, Cursor, Codex, Gemini CLI). Powered by AceData.",
+  "keywords": [
+    "ai",
+    "mcp",
+    "claude-code",
+    "cursor",
+    "codex",
+    "agent",
+    "skills",
+    "image-generation",
+    "video-generation",
+    "suno",
+    "midjourney",
+    "sora",
+    "acedata"
+  ],
+  "homepage": "https://github.com/AceDataCloud/AceKit",
+  "bugs": "https://github.com/AceDataCloud/AceKit/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AceDataCloud/AceKit.git"
+  },
+  "license": "MIT",
+  "author": "AceDataCloud <support@acedata.cloud> (https://platform.acedata.cloud)",
+  "type": "module",
+  "bin": {
+    "acekit": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "catalog.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "lint": "node --check bin/cli.js"
+  }
+}
