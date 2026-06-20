@@ -41,7 +41,16 @@ jobs:
             exit 1
           fi
 
-      - name: Publish
+      # Primary package — clean `npx acekit`.
+      - name: Publish acekit
         run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Scoped alias for brand protection — identical contents, same `acekit` bin.
+      - name: Publish @acedatacloud/acekit (alias)
+        run: |
+          npm pkg set name=@acedatacloud/acekit
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
