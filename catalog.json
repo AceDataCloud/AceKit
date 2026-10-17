@@ -8,7 +8,6 @@
     { "name": "seedream", "modality": "image", "skill": "seedream", "mcp": "SeedreamMCP", "desc": "Seedream image generation & editing" },
     { "name": "nanobanana", "modality": "image", "skill": "nanobanana", "mcp": "NanoBananaMCP", "desc": "Nano Banana (Gemini) image gen & edit" },
     { "name": "openai-image", "modality": "image", "skill": "openai-image", "mcp": "OpenAIMCP", "desc": "OpenAI / gpt-image generation & edits" },
-    { "name": "sora", "modality": "video", "skill": "sora", "mcp": "SoraMCP", "desc": "OpenAI Sora video generation" },
     { "name": "veo", "modality": "video", "skill": "veo", "mcp": "VeoMCP", "desc": "Google Veo video generation" },
     { "name": "kling", "modality": "video", "skill": "kling", "mcp": "KlingMCP", "desc": "Kling video generation" },
     { "name": "luma", "modality": "video", "skill": "luma", "mcp": "LumaMCP", "desc": "Luma Dream Machine video" },
