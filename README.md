@@ -55,7 +55,7 @@ AceKit detects every AI coding agent on your machine (Claude Code, Cursor, Codex
 
 ```text
 "generate a hero image for this README"          → image (Midjourney / Flux / Seedream / NanoBanana)
-"turn this script into a 30-second video"         → video (Sora / Veo / Kling / Seedance)
+"turn this script into a 30-second video"         → video (Veo / Kling / Seedance)
 "compose background music for the demo"           → music (Suno)
 "search the web for the latest X and summarize"   → web search (SERP)
 ```
@@ -76,7 +76,7 @@ AceKit is the **front door** to the whole AceData developer surface. It installs
 | Layer | What you get |
 |---|---|
 | 🧠 **Agent skills** | Battle-tested `SKILL.md` playbooks so your agent calls each API correctly (auth, async polling, retries). |
-| 🔌 **MCP servers** | Suno · Midjourney · Flux · Seedream · NanoBanana · Sora · Veo · Kling · Hailuo · Wan · Luma · Seedance · SERP · ShortURL · … — published to PyPI, MCP Registry, VS Code, JetBrains, Smithery, Docker. |
+| 🔌 **MCP servers** | Suno · Midjourney · Flux · Seedream · NanoBanana · Veo · Kling · Hailuo · Wan · Luma · Seedance · SERP · ShortURL · … — published to PyPI, MCP Registry, VS Code, JetBrains, Smithery, Docker. |
 | 🖥️ **CLIs** | `adc` unified CLI + per-service CLIs for terminal/CI use. |
 | 📦 **SDKs** | Official Python & TypeScript SDKs, generated from our OpenAPI specs. |
 
@@ -101,10 +101,12 @@ One key (`ACEDATACLOUD_API_TOKEN`) unlocks all of it, billed by real usage at **
 | Modality | Providers |
 |---|---|
 | 🖼️ Image | Midjourney · Flux · Seedream · NanoBanana · OpenAI Image · QR Art |
-| 🎬 Video | Sora · Veo · Kling · Luma · Hailuo · Pixverse · Seedance · Wan |
+| 🎬 Video | Veo · Kling · Luma · Hailuo · Pixverse · Seedance · Wan |
 | 🎵 Music | Suno |
 | 🔎 Search | Google SERP (web · images · news · maps · videos) |
 | 🔗 Utility | Short URL, and more |
+
+Sora is retired and is not an available capability. The catalog is a discovery aid; check each service's current availability and access before making requests.
 
 Full catalog → [`catalog.json`](catalog.json).
 

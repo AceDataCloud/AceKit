@@ -15,7 +15,7 @@ import { createInterface } from 'node:readline/promises';
 import { stdin, stdout } from 'node:process';
 
 const SIGNUP_URL =
-  'https://platform.acedata.cloud/?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_campaign=acekit';
+  'https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_cli_api_key';
 const TOKEN_ENV = 'ACEDATACLOUD_API_TOKEN';
 const SKILLS_PKG = '@acedatacloud/skills';
 
@@ -42,8 +42,9 @@ function parseArgs(argv) {
 
 async function ensureToken() {
   if (process.env[TOKEN_ENV]) return process.env[TOKEN_ENV];
-  console.log(`\n🔑  AceKit needs an AceData API key (free quota, no card).`);
-  console.log(`    Get one in ~30s → ${SIGNUP_URL}\n`);
+  console.log(`\n🔑  AceKit needs an AceData API key with the required service access.`);
+  console.log(`    Create or copy your key → ${SIGNUP_URL}\n`);
+  console.log(`    Check your account allowance, balance, and current pricing before API calls.\n`);
   const rl = createInterface({ input: stdin, output: stdout });
   const token = (await rl.question(`    Paste your ${TOKEN_ENV} (or leave blank to set later): `)).trim();
   rl.close();
@@ -68,7 +69,7 @@ Usage:
   npx acekit --help
 
 Roadmap: per-capability \`add <name>\` + per-agent MCP-server config (v0.2).
-Capabilities: see catalog.json  ·  Free key: ${SIGNUP_URL}
+Capabilities: see catalog.json  ·  API key: ${SIGNUP_URL}
 `);
 }
 
