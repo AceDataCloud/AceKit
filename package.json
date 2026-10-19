@@ -1,6 +1,6 @@
 {
   "name": "acekit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "One command — every AI media & model API (image, video, music, search) inside your coding agent (Claude Code, Cursor, Codex, Gemini CLI). Powered by AceData.",
   "keywords": [
     "ai",
