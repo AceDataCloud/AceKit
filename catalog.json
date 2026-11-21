@@ -14,6 +14,7 @@
     { "name": "hailuo", "modality": "video", "skill": "hailuo", "mcp": "HailuoMCP", "desc": "Hailuo / MiniMax video" },
     { "name": "seedance", "modality": "video", "skill": "seedance", "mcp": "SeedanceMCP", "desc": "ByteDance Seedance video" },
     { "name": "wan", "modality": "video", "skill": "wan", "mcp": "WanMCP", "desc": "Alibaba Wan video" },
+    { "name": "acemusic", "modality": "music", "skill": "ace-music", "mcp": "AceMusicMCP", "desc": "ACE Music songs, lyrics, reference audio, covers and mashups" },
     { "name": "suno", "modality": "music", "skill": "suno", "mcp": "SunoMCP", "desc": "Suno AI music, lyrics, covers, personas" },
     { "name": "serp", "modality": "search", "skill": "serp", "mcp": "SerpMCP", "desc": "Google SERP: web, images, news, maps, videos" },
     { "name": "shorturl", "modality": "utility", "skill": "shorturl", "mcp": "ShortURLMCP", "desc": "Short URL creation & management" }
