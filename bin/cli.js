@@ -7,7 +7,8 @@
  * per-agent wiring. AceKit owns: detection, token onboarding, and the funnel CTA.
  * Per-capability selection and MCP-server config are on the roadmap (see README).
  */
-import { execSync, spawnSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
+import { createRequire } from 'node:module';
 import { existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
@@ -52,11 +53,13 @@ async function ensureToken() {
   return token || null;
 }
 
-// Reuse the published engine: copies the full skill toolkit into a target dir.
-function installToDir(targetDir) {
-  const cmd = `npx -y ${SKILLS_PKG} install --target "${targetDir}"`;
-  console.log(`    $ ${cmd}`);
-  return spawnSync(cmd, { stdio: 'inherit', shell: true }).status === 0;
+// Run the installed companion package so list and install see the same release.
+function runSkills(args) {
+  const require = createRequire(import.meta.url);
+  const entry = require.resolve('@acedatacloud/skills/bin/cli.js');
+  const child = spawnSync(process.execPath, [entry, ...args], { stdio: 'inherit' });
+  if (child.error) throw child.error;
+  return child.status ?? 1;
 }
 
 function printHelp() {
@@ -77,7 +80,7 @@ async function main() {
   const { cmd, target } = parseArgs(process.argv);
   if (cmd === 'help') return printHelp();
   if (cmd === 'list') {
-    spawnSync(`npx -y ${SKILLS_PKG} list`, { stdio: 'inherit', shell: true });
+    process.exitCode = runSkills(['list']);
     return;
   }
   if (cmd === 'add') {
@@ -102,7 +105,10 @@ async function main() {
   const targets = [...new Set((found.length ? found : [{ skillsDir: '.agents/skills' }]).map((a) => join(home, a.skillsDir)))];
   console.log(`\n📦  Installing the AceData skill toolkit via ${SKILLS_PKG} …`);
   let ok = true;
-  for (const t of targets) ok = installToDir(t) && ok;
+  for (const targetDir of targets) {
+    console.log(`    Installing skills into ${targetDir}`);
+    if (runSkills(['install', '--target', targetDir]) !== 0) ok = false;
+  }
 
   if (ok) {
     console.log(`\n✅  Done. Try it now — ask your agent:`);
