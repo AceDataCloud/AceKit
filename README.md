@@ -11,7 +11,7 @@
 <p>
   <a href="#-quick-start">⚡ Quick start</a> ·
   <a href="#-whats-inside">🧰 What's inside</a> ·
-  <a href="https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_api_key">🔑 Get API key</a> ·
+  <a href="https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen">🔑 Get API key</a> ·
   <a href="https://discord.gg/f9GRuKCmRc">💬 Discord</a> ·
   <a href="#-star-us">⭐ Star us</a>
 </p>
@@ -29,8 +29,8 @@
 
 ## Get your Ace Data Cloud API key
 
-1. Open [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_api_key). Sign in, or register an account first.
-2. Find **General application**. If it has not been created, choose **Initialize General Application**. A general key can use the services available to your account; a dedicated application's key is limited to its service. Check the required service/model access and [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_pricing).
+1. Open [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen). Sign in, or register an account first.
+2. Find **General application**. If it has not been created, choose **Initialize General Application**. A general key can use the services available to your account; a dedicated application's key is limited to its service. Check the required service/model access and [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen).
 3. Copy the **API Key** from the application card, or open **Keys / Manage Keys → Create** to create a separate key for this integration. Give it a recognizable name so you can revoke or rotate it independently.
 4. When creating a key, review **Expiration Time**, **Set Usage Limitation**, and **Allowed APIs**. Enable only the restrictions you need, allow the operations you will call, then click **Create** and copy the token from the key list. Task lookup does not grant permission to submit a generation. Confirm the application's balance can cover your first request; any trial allowance is whatever your account currently displays.
 5. Copy only the token value, without quotation marks, spaces, or `Bearer `. An API Key / API Token field expects this raw value; only a manually configured HTTP `Authorization` header needs the `Bearer ` prefix. A `platform-...` account-management token cannot replace a generation API key.
@@ -65,7 +65,7 @@ npx acekit list      # see available capabilities
 npx acekit --help
 ```
 
-> **Check your account allowance and current pricing.** Create a key at **[platform.acedata.cloud](https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_api_key)** using the steps above. Set `ACEDATACLOUD_API_TOKEN` for your agent before making API calls.
+> **Check your account allowance and current pricing.** Create a key at **[platform.acedata.cloud](https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen)** using the steps above. Set `ACEDATACLOUD_API_TOKEN` for your agent before making API calls.
 
 ---
 
@@ -125,15 +125,15 @@ It tells the next developer this is worth their three seconds.
 
 ## 🔗 Links
 
-- 🔑 Get API key & docs: <https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_api_key>
-- 📚 API reference: <https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_documents>
+- 🔑 Get API key & docs: <https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=opensource&utm_medium=referral&utm_campaign=evergreen>
+- 📚 API reference: <https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen>
 - 🧠 Skills source: <https://github.com/AceDataCloud/Skills>
 - 🔌 MCP servers: <https://github.com/AceDataCloud/MCPs>
 - 💬 Discord: <https://discord.gg/f9GRuKCmRc>
 - 🐦 X: [@acedatacloud](https://x.com/acedatacloud)
 - 📧 Email: office@acedata.cloud
-- 🆘 Support: <https://platform.acedata.cloud/support?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_support>
+- 🆘 Support: <https://platform.acedata.cloud/support?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen>
 
 ## 📄 License
 
-MIT © [AceDataCloud](https://platform.acedata.cloud?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_readme_platform)
+MIT © [AceDataCloud](https://platform.acedata.cloud?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen)
