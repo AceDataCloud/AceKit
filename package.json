@@ -1,7 +1,7 @@
 {
   "name": "acekit",
-  "version": "0.1.2",
-  "description": "One command \u2014 every AI media & model API (image, video, music, search) inside your coding agent (Claude Code, Cursor, Codex, Gemini CLI). Powered by AceData.",
+  "version": "0.1.3",
+  "description": "One command — every AI media & model API (image, video, music, search) inside your coding agent (Claude Code, Cursor, Codex, Gemini CLI). Powered by AceData.",
   "keywords": [
     "ai",
     "mcp",
@@ -41,10 +41,6 @@
     "node": ">=18"
   },
   "scripts": {
-    "lint": "node --check bin/cli.js",
-    "test": "node --test"
-  },
-  "dependencies": {
-    "@acedatacloud/skills": ">=2026.1118.329001"
+    "lint": "node --check bin/cli.js"
   }
 }

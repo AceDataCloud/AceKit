@@ -7,8 +7,7 @@
  * per-agent wiring. AceKit owns: detection, token onboarding, and the funnel CTA.
  * Per-capability selection and MCP-server config are on the roadmap (see README).
  */
-import { spawnSync } from 'node:child_process';
-import { createRequire } from 'node:module';
+import { execSync, spawnSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
@@ -16,9 +15,9 @@ import { createInterface } from 'node:readline/promises';
 import { stdin, stdout } from 'node:process';
 
 const SIGNUP_URL =
-  'https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_medium=referral&utm_campaign=evergreen&utm_content=acekit_cli_api_key';
+  'https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_medium=referral&utm_campaign=evergreen';
 const TOKEN_ENV = 'ACEDATACLOUD_API_TOKEN';
-const SKILLS_PKG = '@acedatacloud/skills';
+const SKILLS_PKG = '@acedatacloud/skills@latest';
 
 // Detect installed agents and the skills dir we install into for each.
 const AGENTS = [
@@ -53,13 +52,11 @@ async function ensureToken() {
   return token || null;
 }
 
-// Run the installed companion package so list and install see the same release.
-function runSkills(args) {
-  const require = createRequire(import.meta.url);
-  const entry = require.resolve('@acedatacloud/skills/bin/cli.js');
-  const child = spawnSync(process.execPath, [entry, ...args], { stdio: 'inherit' });
-  if (child.error) throw child.error;
-  return child.status ?? 1;
+// Reuse the published engine: copies the full skill toolkit into a target dir.
+function installToDir(targetDir) {
+  const cmd = `npx -y ${SKILLS_PKG} install --target "${targetDir}"`;
+  console.log(`    $ ${cmd}`);
+  return spawnSync(cmd, { stdio: 'inherit', shell: true }).status === 0;
 }
 
 function printHelp() {
@@ -80,7 +77,7 @@ async function main() {
   const { cmd, target } = parseArgs(process.argv);
   if (cmd === 'help') return printHelp();
   if (cmd === 'list') {
-    process.exitCode = runSkills(['list']);
+    spawnSync(`npx -y ${SKILLS_PKG} list`, { stdio: 'inherit', shell: true });
     return;
   }
   if (cmd === 'add') {
@@ -105,10 +102,7 @@ async function main() {
   const targets = [...new Set((found.length ? found : [{ skillsDir: '.agents/skills' }]).map((a) => join(home, a.skillsDir)))];
   console.log(`\n📦  Installing the AceData skill toolkit via ${SKILLS_PKG} …`);
   let ok = true;
-  for (const targetDir of targets) {
-    console.log(`    Installing skills into ${targetDir}`);
-    if (runSkills(['install', '--target', targetDir]) !== 0) ok = false;
-  }
+  for (const t of targets) ok = installToDir(t) && ok;
 
   if (ok) {
     console.log(`\n✅  Done. Try it now — ask your agent:`);
