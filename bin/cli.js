@@ -17,7 +17,7 @@ import { stdin, stdout } from 'node:process';
 const SIGNUP_URL =
   'https://platform.acedata.cloud/console/applications?inviter_id=4c37bac7-d460-4d5e-8a72-8d5312050f2c&utm_source=cli&utm_medium=referral&utm_campaign=evergreen';
 const TOKEN_ENV = 'ACEDATACLOUD_API_TOKEN';
-const SKILLS_PKG = '@acedatacloud/skills';
+const SKILLS_PKG = '@acedatacloud/skills@latest';
 
 // Detect installed agents and the skills dir we install into for each.
 const AGENTS = [

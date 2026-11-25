@@ -56,7 +56,7 @@ AceKit detects every AI coding agent on your machine (Claude Code, Cursor, Codex
 ```text
 "generate a hero image for this README"          → image (Midjourney / Flux / Seedream / NanoBanana)
 "turn this script into a 30-second video"         → video (Veo / Kling / Seedance)
-"compose background music for the demo"           → music (Suno)
+"compose background music for the demo"           → music (ACE Music / Suno)
 "search the web for the latest X and summarize"   → web search (SERP)
 ```
 
@@ -102,7 +102,7 @@ One key (`ACEDATACLOUD_API_TOKEN`) unlocks all of it, billed by real usage at **
 |---|---|
 | 🖼️ Image | Midjourney · Flux · Seedream · NanoBanana · OpenAI Image · QR Art |
 | 🎬 Video | Veo · Kling · Luma · Hailuo · Pixverse · Seedance · Wan |
-| 🎵 Music | Suno |
+| 🎵 Music | [ACE Music](https://skills.sh/acedatacloud/skills/ace-music) · Suno |
 | 🔎 Search | Google SERP (web · images · news · maps · videos) |
 | 🔗 Utility | Short URL, and more |
 
